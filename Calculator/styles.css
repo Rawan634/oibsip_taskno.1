@@ -1,0 +1,66 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f0f0;
+  font-family: Arial, sans-serif;
+  background-image: url('https://as1.ftcdn.net/v2/jpg/01/57/64/54/1000_F_157645403_iMWFr2ukAOoGzvIx8uoPOsCEbUnTC0sk.jpg');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+
+.calculator {
+  background: rgba(255, 255, 255, 0.8); 
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 10px;
+}
+
+.display {
+  background: #333; 
+  color: #ff3b30; 
+  font-size: 2em;
+  padding: 10px;
+  text-align: right;
+  border-radius: 5px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.button {
+  background: #e0e0e0; 
+  border: none;
+  padding: 20px;
+  font-size: 1.5em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.button:hover {
+  background: #ccc; 
+}
+
+.button[data-value="="] {
+  background: #ff9500; 
+  color: #fff;
+}
+
+.button[data-value="="]:hover {
+  background: #e08900; 
+}
+
+.button[data-value="C"], .button[data-value="CE"] {
+  background: #ff3b30; 
+  color: #fff;
+  grid-column: span 2; 
+}
