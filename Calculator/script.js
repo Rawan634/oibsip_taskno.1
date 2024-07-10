@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
         display.innerText = currentInput || "0";
       } else if (value === "=") {
         try {
-          // Evaluate the expression and round the result to 10 decimal places
           currentInput = eval(currentInput);
           currentInput = parseFloat(currentInput.toFixed(10));
           display.innerText = currentInput;
